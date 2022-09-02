@@ -1,0 +1,38 @@
+header a {
+  font-weight: 500;
+  color: #201b1b;
+  text-decoration: inherit;
+}
+header a:hover {
+  color: #736a6a;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background-color: rgb(229, 22, 22);
+  width: 100%;
+}
+
+header h1 {
+  display: flex;
+  font-size: 20px;
+  color: white;
+  flex-shrink: 0;
+}
+
+header nav {
+  width: 100%;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+header ul li {
+  margin-right: 10px;
+  font-size: 20px;
+}
