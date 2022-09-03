@@ -1,8 +1,11 @@
 import "./Layout.css";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function Layout(props) {
-  const { items, itemsCount } = props;
+  const { items, itemsCount, onClickToCart } = props;
+  const [productList, setProductList] = useState([]);
+
   return (
     <div className="layout">
       <header>
@@ -11,13 +14,16 @@ function Layout(props) {
           <ul>
             <li>
               <Link to="/">
-                Home onClickToCart={props.itemsCount}
+                Home {() => onClickToCart(puppies)}
                 {props.puppies}
               </Link>
               {/* <a href="#">Home</a> */}
             </li>
             <li>
-              <Link to="/cart">Cart ({props.itemsCount})</Link>
+              <Link to="/cart">
+                Cart ({() => onClickToCart(productList)}
+                {props.itemsCount})
+              </Link>
             </li>
           </ul>
         </nav>

@@ -5,7 +5,7 @@ import { useCart } from "react-use-cart";
 
 const HomePage = (props) => {
   const [productList, setProductList] = useState([]);
-  const { onClickToCart } = useCart();
+  const { puppy, onClickToCart } = props;
 
   useEffect(() => {}, []); // doar odata se executa
 
@@ -19,10 +19,10 @@ const HomePage = (props) => {
               <img src={puppy.url}></img>
               <div>
                 <button
-                  className="btn btn-success"
-                  onClick={() => onClickToCart(puppy)}
+                  className="add btn btn-success"
+                  onClick={(_event) => onClickToCart(puppy)}
                 >
-                  Add for Adoption
+                  Add to Adopt
                 </button>
               </div>
             </div>
